@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Books | Bilim va Moliya Portali</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #212529;
+            --card-bg: #f8f9fa;
+            --primary-color: #6a11cb;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --card-bg: #1e1e1e;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: 0.3s;
+        }
+
+        /* Hero section */
+        .hero-section {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 80px 0;
+        }
+
+        /* Karta stillari */
+        .custom-card {
+            background-color: var(--card-bg);
+            border: none;
+            border-radius: 15px;
+            transition: 0.3s;
+            height: 100%;
+        }
+
+        .custom-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            margin-bottom: 40px;
+            font-weight: bold;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        .nav-link { cursor: pointer; }
+        
+        /* Shaxsiy kabinet avatar */
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body data-theme="light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"><i class="fas fa-book-open me-2"></i>MODERN BOOKS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" onclick="showSection('home')">Bosh sahifa</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="showSection('catalog')">Katalog</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="showSection('blog')">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="showSection('profile')">Kabinet</a></li>
+                    <li class="nav-item"><a class="nav-link" onclick="showSection('contact')">Aloqa</a></li>
+                    <li class="nav-item border-start ms-lg-3 ps-lg-3">
+                        <button id="theme-toggle" class="btn btn-sm btn-outline-light">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="home-section" class="content-section">
+        <header class="hero-section text-center">
+            <div class="container">
+                <h1 class="display-3 fw-bold">O'z kelajagingizga investitsiya qiling</h1>
+                <p class="lead mb-4">Moliya, biznes va shaxsiy rivojlanish bo'yicha eng yaxshi kitoblar jamlanmasi.</p>
+                <button class="btn btn-warning btn-lg fw-bold" onclick="showSection('catalog')">Kitoblarni ko'rish</button>
+            </div>
+        </header>
+
+        <section class="container my-5">
+            <h2 class="section-title">Ommabop kitoblar</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card custom-card p-3 text-center">
+                        <img src="ota.png" width="200px"; height="200px" class="card-img-top rounded" alt="Kitob">
+                        <div class="card-body">
+                            <h6>Boy ota, kambag'al ota</h6>
+                            <p class="small text-muted">Robert Kiyosaki</p>
+                            <span class="badge bg-success">Moliya</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card custom-card p-3 text-center">
+                        <img src="21.png" width="200px"; height="200px" class="card-img-top rounded" alt="Kitob">
+                        <div class="card-body">
+                            <h6>Samaradorlikning 21 yo'li</h6>
+                            <p class="small text-muted">Brayan Treysi</p>
+                            <span class="badge bg-success">Rivojlanish</span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-3">
+                    <div class="card custom-card p-3 text-center">
+                        <img src="diqqat.png" width="200px"; height="200px" class="card-img-top rounded" alt="Kitob">
+                        <div class="card-body">
+                            <h6>Diqqat</h6>
+                            <p class="small text-muted">Kel Nyuport</p>
+                            <span class="badge bg-success">Rivojlanish</span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-3">
+                    <div class="card custom-card p-3 text-center">
+                        <img src="fact.png" width="200px"; height="200px" class="card-img-top rounded" alt="Kitob">
+                        <div class="card-body">
+                            <h6>Fact Full Ness</h6>
+                            <p class="small text-muted">Xans Rosling</p>
+                            <span class="badge bg-success">Fikrlash</span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-3">
+                    <div class="card custom-card p-3 text-center">
+                        <img src="qoida.png" width="200px"; height="200px" class="card-img-top rounded" alt="Kitob">
+                        <div class="card-body">
+                            <h6>Hayot uchun 12 qoida</h6>
+                            <p class="small text-muted">Jon Piterson</p>
+                            <span class="badge bg-success">Tartibsizlikka qarshi malham</span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-3">
+                    <div class="card custom-card p-3 text-center">
+                        <img src="qala.png" width="200px"; height="200px" class="card-img-top rounded" alt="Kitob">
+                        <div class="card-body">
+                            <h6>Raqamli qal'a</h6>
+                            <p class="small text-muted">Den Braun</p>
+                            <span class="badge bg-success">o'z-o'zini boshqarish</span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-3">
+                    <div class="card custom-card p-3 text-center">
+                        <img src="savol.png" width="200px"; height="200px" class="card-img-top rounded" alt="Kitob">
+                        <div class="card-body">
+                            <h6>Coc</h6>
+                            <p class="small text-muted">Jon Miller</p>
+                            <span class="badge bg-success">Shaxsiy rivojlanish</span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-3">
+                    <div class="card custom-card p-3 text-center">
+                        <img src="ibtido.png" width="200px"; height="200px" class="card-img-top rounded" alt="Kitob">
+                        <div class="card-body">
+                            <h6>Ibtido</h6>
+                            <p class="small text-muted">Den Braun</p>
+                            <span class="badge bg-success">Shaxsiy Rivojlamish</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </section>
+    </div>
+
+    <div id="catalog-section" class="content-section d-none">
+        <div class="container my-5">
+            <h2 class="section-title">Kitoblar katalogi</h2>
+            
+            <div class="d-flex gap-2 mb-4 flex-wrap">
+                <button class="btn btn-primary filter-btn" data-filter="all">Hammasi</button>
+                <button class="btn btn-outline-secondary filter-btn" data-filter="moliya">Moliya</button>
+                <button class="btn btn-outline-secondary filter-btn" data-filter="psixologiya">Psixologiya</button>
+                <button class="btn btn-outline-secondary filter-btn" data-filter="vaqt">Vaqtni boshqarish</button>
+            </div>
+
+            <div class="row g-4" id="book-list">
+                <div class="col-md-4 book-item" data-category="moliya">
+                    <div class="card custom-card h-100 d-flex flex-row p-2">
+                        <img src="pul.png" width="200px"; height="200px" class="rounded" alt="Kitob">
+                        <div class="ms-3">
+                            <h6 class="mb-1">Psixologiya va Pul</h6>
+                            <p class="small mb-2">Morgan Housel</p>
+                            <button class="btn btn-sm btn-primary">O'qish</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 book-item" data-category="moliya">
+                    <div class="card custom-card h-100 d-flex flex-row p-2">
+                        <img src="qoida.png" width="200px"; height="200px" class="rounded" alt="Kitob">
+                        <div class="ms-3">
+                            <h6 class="mb-1">Hayot uchun 12 qoida</h6>
+                            <p class="small mb-2">Jordan Piterson</p>
+                            <button class="btn btn-sm btn-primary">O'qish</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 book-item" data-category="moliya">
+                    <div class="card custom-card h-100 d-flex flex-row p-2">
+                        <img src="pul.png" width="200px"; height="200px" class="rounded" alt="Kitob">
+                        <div class="ms-3">
+                            <h6 class="mb-1">Psixologiya va Pul</h6>
+                            <p class="small mb-2">Morgan Housel</p>
+                            <button class="btn btn-sm btn-primary">O'qish</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 book-item" data-category="psixologiya">
+                    <div class="card custom-card h-100 d-flex flex-row p-2">
+                        <img src="Jeyms_Klir._Atom_odatlar.jpg" width="200px"; height="200px" class="rounded" alt="Kitob">
+                        <div class="ms-3">
+                            <h6 class="mb-1">Atom Odatlar</h6>
+                            <p class="small mb-2">James Clear</p>
+                            <button class="btn btn-sm btn-primary">O'qish</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 book-item" data-category="psixologiya">
+                    <div class="card custom-card h-100 d-flex flex-row p-2">
+                        <img src="ong.png" width="200px"; height="200px" class="rounded" alt="Kitob">
+                        <div class="ms-3">
+                            <h6 class="mb-1">Psixologiya 101</h6>
+                            <p class="small mb-2">Pol kleynmen</p>
+                            <button class="btn btn-sm btn-primary">O'qish</button>
+                        </div>
+                    </div>
+           
+                </div>
+                <div class="col-md-4 book-item" data-category="psixologiya">
+                    <div class="card custom-card h-100 d-flex flex-row p-2">
+                        <img src="zukkolar.png" width="200px"; height="200px" class="rounded" alt="Kitob">
+                        <div class="ms-3">
+                            <h6 class="mb-1">Zukkolar va landavurlar</h6>
+                            <p class="small mb-2">Malkolm Gladuel</p>
+                            <button class="btn btn-sm btn-primary">O'qish</button>
+                        </div>
+                    </div>
+           
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="blog-section" class="content-section d-none">
+        <div class="container my-5">
+            <h2 class="section-title">Foydali maqolalar</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card custom-card overflow-hidden">
+                        <div class="row g-0">
+                            <div class="col-4" style="background: #ddd;"></div>
+                            <div class="col-8 p-3">
+                                <h5>Qanday qilib ko'proq mutolaa qilish mumkin?</h5>
+                                <p class="small text-muted">Vaqtni to'g'ri taqsimlash sirlari...</p>
+                                <a href="#" class="text-primary">Batafsil</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="profile-section" class="content-section d-none">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card custom-card p-4 text-center">
+                        <img src="https://via.placeholder.com/100" class="profile-img mx-auto mb-3" alt="User">
+                        <h4>Samandar</h4>
+                        <p class="text-muted">Web-developer & Kitobxon</p>
+                        <hr>
+                        <div class="text-start">
+                            <p><i class="fas fa-book me-2"></i> O'qilgan: 12 ta</p>
+                            <p><i class="fas fa-bookmark me-2"></i> Saqlangan: 5 ta</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <h3 class="mb-4">Hozir o'qilmoqda</h3>
+                    <div class="progress mb-3" style="height: 25px;">
+                        <div class="progress-bar bg-success" style="width: 65%;">65%</div>
+                    </div>
+                    <p><strong>Fikr karvoni</strong> - Napoleon Xill</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact-section" class="content-section d-none">
+        <div class="container my-5">
+            <h2 class="section-title">Biz bilan bog'lanish</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form class="card custom-card p-4">
+                        <div class="mb-3">
+                            <label class="form-label">Ismingiz</label>
+                            <input type="text" class="form-control" placeholder="Ismingizni kiriting">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="example@mail.com">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Xabar</label>
+                            <textarea class="form-control" rows="4"></textarea>
+                        </div>
+                        <button class="btn btn-primary w-100">Yuborish</button>
+                    </form>
+                </div>
+                <div class="col-md-6 ps-md-5">
+                    <h4>Ma'lumotlarimiz</h4>
+                    <p><i class="fas fa-map-marker-alt me-2 text-primary"></i> Toshkent shahri, TATU</p>
+                    <p><i class="fas fa-phone me-2 text-primary"></i> +998 90 123 45 67</p>
+                    <p><i class="fas fa-envelope me-2 text-primary"></i> info@modernbooks.uz</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2026 Modern Books. Mamaraimov Samandar.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Sahifalar o'rtasida o'tish (SPA simulyatsiyasi)
+        function showSection(sectionId) {
+            $('.content-section').addClass('d-none');
+            $('#' + sectionId + '-section').removeClass('d-none');
+            
+            // Navigatsiyada faol holat
+            $('.nav-link').removeClass('active');
+            event.target.classList.add('active');
+        }
+
+        $(document).ready(function() {
+            // Tungi rejim
+            $('#theme-toggle').click(function() {
+                let body = $('body');
+                if (body.attr('data-theme') === 'light') {
+                    body.attr('data-theme', 'dark');
+                    $(this).html('<i class="fas fa-sun"></i>');
+                } else {
+                    body.attr('data-theme', 'light');
+                    $(this).html('<i class="fas fa-moon"></i>');
+                }
+            });
+
+            // Katalog filtratsiyasi
+            $('.filter-btn').click(function() {
+                let filter = $(this).attr('data-filter');
+                
+                $('.filter-btn').removeClass('btn-primary').addClass('btn-outline-secondary');
+                $(this).removeClass('btn-outline-secondary').addClass('btn-primary');
+
+                if(filter === 'all') {
+                    $('.book-item').show(300);
+                } else {
+                    $('.book-item').hide();
+                    $('.book-item[data-category="' + filter + '"]').show(300);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
